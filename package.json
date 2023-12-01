@@ -9,6 +9,7 @@
   "devDependencies": {
     "@redwoodjs/cli-storybook": "6.4.1",
     "@redwoodjs/core": "6.4.1",
+    "@types/babel-types": "^7.0.15",
     "prettier-plugin-tailwindcss": "0.4.1"
   },
   "eslintConfig": {

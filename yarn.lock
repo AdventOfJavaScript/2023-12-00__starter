@@ -7025,7 +7025,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/babel-types@npm:*":
+"@types/babel-types@npm:*, @types/babel-types@npm:^7.0.15":
   version: 7.0.15
   resolution: "@types/babel-types@npm:7.0.15"
   checksum: d4ff6f0c177aee27526e306ee8621dc0c6e6315b684885736cbed719477a5e6afd0d76e5425ce41a2c0fc2fefe9f6c85d641c7504f048e3fc0aa810692a19f31
@@ -21038,6 +21038,7 @@ __metadata:
   dependencies:
     "@redwoodjs/cli-storybook": 6.4.1
     "@redwoodjs/core": 6.4.1
+    "@types/babel-types": ^7.0.15
     prettier-plugin-tailwindcss: 0.4.1
   languageName: unknown
   linkType: soft
