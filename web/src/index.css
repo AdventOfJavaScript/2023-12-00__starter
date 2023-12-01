@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Bebas+Neue&family=Inter:wght@400;500;700&family=Kalam:wght@700&display=swap');
+
+/**
+ * START --- SETUP TAILWINDCSS EDIT
+ *
+ * `yarn rw setup ui tailwindcss` placed these directives here
+ * to inject Tailwind's styles into your CSS.
+ * For more information, see: https://tailwindcss.com/docs/installation
+ */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/**
+ * END --- SETUP TAILWINDCSS EDIT
+ */
+
+
+@layer base {
+  .label,
+  label {
+    @apply font-handwriting uppercase text-xl tracking-tighter
+  }
+
+  label:has(+ textarea:placeholder-shown),
+  label:has(+ input:placeholder-shown) {
+    @apply text-3xl top-8 left-8 transition-all duration-300 pointer-events-none
+  }
+
+  label:has(+ textarea),
+  label:has(+ textarea:focus),
+  label:has(+ input),
+  label:has(+ input:focus) {
+    @apply absolute top-2 left-2 text-xl
+  }
+
+  textarea,
+  input[type="password"],
+  input[type="url"],
+  input[type="number"],
+  input[type="tel"],
+  input[type="email"],
+  input[type="text"] {
+    @apply font-sans text-2xl h-[100px] w-full px-7
+  }
+
+  textarea {
+    @apply h-[400px] pt-14
+  }
+
+  input.short {
+    @apply h-[52px] text-lg outline-none
+  }
+
+  /* invalid label */
+  label:has(+ input:invalid:not(:placeholder-shown)) {
+    @apply text-white
+  }
+
+  /* invalid input */
+  input:invalid:not(:placeholder-shown) {
+    @apply bg-orangeRed border-fireEngineRed
+  }
+
+  /* checkbox */
+  input[type="checkbox"] {
+    @apply hidden
+  }
+
+  input[type="checkbox"] + label {
+    @apply flex items-center gap-4 font-handwriting uppercase text-3xl cursor-pointer
+  }
+
+  input[type="checkbox"] + label:before {
+    @apply content-[''] w-10 h-10 block relative -top-1 bg-unchecked
+  }
+
+  input[type="checkbox"]:checked + label:before {
+    @apply content-[''] w-10 h-10 block relative -top-1 bg-checked
+  }
+
+  button[type="submit"] {
+    @apply bg-supernova font-handwriting uppercase text-3xl text-black w-full rounded-full py-5;
+  }
+
+  button.medium,
+  button[type="submit"].medium {
+    @apply font-sans text-xl tracking-tight font-bold uppercase h-12 px-8
+  }
+
+  a.button.small,
+  button.small,
+  button[type="submit"].small {
+    @apply inline-block h-8 px-4 text-sm font-bold uppercase;
+  }
+
+  main {
+    @apply z-10 overflow-scroll relative mb-[350px];
+  }
+
+  svg {
+    @apply fill-current
+  }
+}
+
+@layer components {
+  .bg-auth {
+    @apply min-h-screen w-screen bg-silverTree dark:bg-nileBlue bg-[center_top] bg-no-repeat bg-[length:1440px_auto] min-[1440px]:bg-[length:100%_auto];
+  }
+
+  .bg-interior {
+    @apply grid min-h-screen w-screen grid-cols-12 gap-x-5 bg-silverTree bg-no-repeat dark:bg-nileBlue
+  }
+
+  .page-title {
+    @apply font-condensed uppercase text-[116px] text-white leading-none mb-5
+  }
+
+  .field {
+    @apply mb-4
+  }
+
+  .dropdown {
+    @apply relative top-6 left-6
+  }
+
+  .dropdown:before {
+    content: '';
+    @apply border-[12px] border-transparent border-b-white absolute -top-[24px] left-[32px]
+  }
+
+  .dropdown li {
+    @apply flex items-center gap-x-3 font-condensed text-3xl uppercase text-black;
+  }
+
+  .field {
+    @apply relative;
+  }
+
+  .indicator {
+    @apply center h-6 w-6 rounded-full border-2 border-white;
+  }
+
+  .with-rulers {
+    @apply flex items-center gap-7 justify-center;
+  }
+
+  .with-rulers:before,
+  .with-rulers:after {
+    content: '';
+    text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+    @apply w-[72px] h-[6px] bg-current block
+  }
+
+  /* RSVP Status */
+  .status-success {
+    @apply bg-spanishGreen text-spanishGreen
+  }
+
+  .status-warning {
+    @apply bg-supernova text-supernova
+  }
+
+  .status-error {
+    @apply bg-orangeRed text-orangeRed
+  }
+
+  /* nav */
+  .top-nav li {
+    @apply font-condensed tracking-wide text-[72px] uppercase leading-none
+  }
+
+  .top-nav li a {
+    @apply hover:text-orangeRed
+  }
+
+  .bottom-nav ul {
+    @apply flex flex-col gap-3
+  }
+
+  .bottom-nav ul a {
+    @apply hover:text-orangeRed
+  }
+
+  .number-with-outline {
+    @apply font-script text-[130px] leading-none
+  }
+}
+
+@layer utilties {
+  .center {
+    @apply flex items-center justify-center;
+  }
+
+  .outline-text {
+    -webkit-text-stroke-width: 20px;
+    -webkit-text-stroke-color: white;
+    @apply text-black;
+  }
+}
