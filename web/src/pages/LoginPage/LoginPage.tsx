@@ -1,4 +1,5 @@
-import { Form, InputField, Label, TextField } from '@redwoodjs/forms'
+import { Form } from '@redwoodjs/forms'
+import { Link, routes } from '@redwoodjs/router'
 import { MetaTags } from '@redwoodjs/web'
 
 import Button from 'src/components/Button/Button'
@@ -10,7 +11,7 @@ const LoginPage = () => {
   return (
     <>
       <MetaTags title="Login" description="Login page" />
-      <div className="container mx-auto">
+      <div className="container mx-auto items-center justify-center">
         <HeaderWithRulers heading="Login" className="text-white" />
         <Form>
           <Input name="Username" />
@@ -25,6 +26,11 @@ const LoginPage = () => {
           >
             Submit
           </Button>
+          <div className="items-center justify-center ">
+            <Link to={routes.signup()} className="underline">
+              Need an account?
+            </Link>
+          </div>
         </Form>
       </div>
     </>
