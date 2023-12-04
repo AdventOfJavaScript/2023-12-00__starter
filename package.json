@@ -7,6 +7,7 @@
     ]
   },
   "devDependencies": {
+    "@redwoodjs/auth-auth0-setup": "6.4.1",
     "@redwoodjs/cli-storybook": "6.4.1",
     "@redwoodjs/core": "6.4.1",
     "prettier-plugin-tailwindcss": "0.4.1"
@@ -22,5 +23,9 @@
   "prisma": {
     "seed": "yarn rw exec seed"
   },
-  "packageManager": "yarn@3.7.0"
+  "packageManager": "yarn@3.7.0",
+  "dependencies": {
+    "@auth0/auth0-react": "^2.2.3",
+    "dotenv": "^16.3.1"
+  }
 }
