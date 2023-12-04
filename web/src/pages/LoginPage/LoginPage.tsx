@@ -10,7 +10,7 @@ const LoginPage = () => {
   return (
     <>
       <MetaTags title="Login" description="Login page" />
-      <div className="mx-52">
+      <div className="container mx-auto">
         <HeaderWithRulers heading="Login" className="text-white" />
         <Form>
           <Input name="Username" />
