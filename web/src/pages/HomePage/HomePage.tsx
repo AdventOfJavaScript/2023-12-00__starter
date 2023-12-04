@@ -4,8 +4,7 @@ import { MetaTags } from '@redwoodjs/web'
 
 import AuthLayout from 'src/layouts/AuthLayout/AuthLayout'
 
-import LoginButton from './Login'
-import LogoutButton from './Logout'
+import LoginPage from '../LoginPage/LoginPage'
 
 const HomePage = () => {
   return (
@@ -19,12 +18,7 @@ const HomePage = () => {
           }}
         >
           <MetaTags title="Home" description="Home Page" />
-
-          <h1>Login Here</h1>
-          <p>
-            <LoginButton />
-            <LogoutButton />
-          </p>
+          <LoginPage></LoginPage>
         </Auth0Provider>
       </AuthLayout>
     </>
