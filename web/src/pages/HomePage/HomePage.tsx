@@ -6,7 +6,6 @@ import AuthLayout from 'src/layouts/AuthLayout/AuthLayout'
 
 import LoginButton from './Login'
 import LogoutButton from './Logout'
-// import { Link, routes } from '@redwoodjs/router'
 
 const HomePage = () => {
   return (
@@ -23,8 +22,6 @@ const HomePage = () => {
 
           <h1>Login Here</h1>
           <p>
-            {/* My default route is named <code>home</code>, link to me with `
-          <Link to={routes.home()}>Home</Link> */}
             <LoginButton />
             <LogoutButton />
           </p>
