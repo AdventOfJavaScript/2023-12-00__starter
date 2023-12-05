@@ -6,12 +6,13 @@ import Button from 'src/components/Button/Button'
 import HeaderWithRulers from 'src/components/HeaderWithRulers/HeaderWithRulers'
 import Input from 'src/components/Input/Input'
 import ShowHidePassword from 'src/components/ShowHidePassword/ShowHidePassword'
+import { useAuth } from 'src/lib/auth'
 
 const LoginPage = () => {
   return (
     <>
       <MetaTags title="Login" description="Login page" />
-      <div className="container mx-auto items-center justify-center">
+      <div className="container	 mx-auto items-center justify-center">
         <HeaderWithRulers heading="Login" className="text-white" />
         <Form>
           <Input name="Username" />
@@ -26,9 +27,13 @@ const LoginPage = () => {
           >
             Submit
           </Button>
-          <div className="items-center justify-center ">
+          <div className="container	 mx-auto items-center justify-center ">
             <Link to={routes.signup()} className="underline">
               Need an account?
+            </Link>
+            <br />
+            <Link to={routes.forgotpassword()} className="underline">
+              Forgot Password?
             </Link>
           </div>
         </Form>
