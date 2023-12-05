@@ -14,6 +14,8 @@
     "AUTH0_CLIENT_ID",
     "AUTH0_REDIRECT_URI",
     "AUTH0_AUDIENCE",
+    "SUPABASE_URL",
+    "SUPABASE_KEY",
   ]
 [api]
   port = 8911
