@@ -13,7 +13,7 @@ const ShowHidePassword = ({ name }) => {
 
   return (
     <div className="field relative">
-      <Label name={name}>Label</Label>
+      <Label name={name}>{name}</Label>
       {isPasswordShowing ? (
         <PasswordField name={name} placeholder=" " />
       ) : (
