@@ -29,7 +29,7 @@ const EventPage = () => {
         <HeaderWithRulers heading="Set up your Group" className="text-white" />
         <Form onSubmit={onSubmit}>
           <Input name="Group Name" />
-          <DateField name="Event Date" className="input-date" />
+          <DateField name="Event Date" className="date-field" />
           <Checkbox name="Event Type" />
           <Submit
             className="
