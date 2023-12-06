@@ -33,15 +33,15 @@ enum Role {
 }
 
 model UserStatus {
-  id      Int              @id @default(autoincrement())
+  id      Int    @id @default(autoincrement())
   userId  Int
-  user    User             @relation(fields: [userId], references: [id])
+  user    User   @relation(fields: [userId], references: [id])
   eventId String
-  event   Event            @relation(fields: [eventId], references: [id])
-  status  InvitationStatus
+  event   Event  @relation(fields: [eventId], references: [id])
+  status  Status
 }
 
-enum InvitationStatus {
+enum Status {
   INVITED
   DECLINED
   ACCEPTED
@@ -55,7 +55,7 @@ model Event {
   updatedAt    DateTime     @updatedAt
   sendReminder Boolean      @default(false)
   userStatus   UserStatus[]
-  pairings     Pairing[]
+  pairing      Pairing[]
   wishList     WishList[]
   thankYou     ThankYou[]
 }
