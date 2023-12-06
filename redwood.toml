@@ -6,14 +6,10 @@
 # https://redwoodjs.com/docs/app-configuration-redwood-toml
 
 [web]
-  title = "Redwood App"
+  title = "Secret Santa"
   port = 8910
   apiUrl = "/.redwood/functions" # You can customize graphql and dbauth urls individually too: see https://redwoodjs.com/docs/app-configuration-redwood-toml#api-paths
   includeEnvironmentVariables = [
-    "AUTH0_DOMAIN",
-    "AUTH0_CLIENT_ID",
-    "AUTH0_REDIRECT_URI",
-    "AUTH0_AUDIENCE",
     "SUPABASE_URL",
     "SUPABASE_KEY",
   ]
