@@ -1,22 +1,38 @@
+import { supabase } from 'api/db/supabase'
+
 import { Form } from '@redwoodjs/forms'
-import { Link, routes } from '@redwoodjs/router'
+import { Link, navigate, routes } from '@redwoodjs/router'
 import { MetaTags } from '@redwoodjs/web'
 
 import Button from 'src/components/Button/Button'
 import HeaderWithRulers from 'src/components/HeaderWithRulers/HeaderWithRulers'
 import Input from 'src/components/Input/Input'
 import ShowHidePassword from 'src/components/ShowHidePassword/ShowHidePassword'
-import { useAuth } from 'src/lib/auth'
 
 const LoginPage = () => {
+  const onSubmit = (inputs) => {
+    signIn(inputs)
+    onLogin()
+  }
+  const onLogin = () => {
+    navigate(routes.dashboard())
+  }
+  async function signIn(state) {
+    console.log(state)
+    const { data, error } = await supabase.auth.signInWithPassword({
+      email: state.Email,
+      password: state.Password,
+    })
+    console.log(data.user.role)
+  }
   return (
     <>
       <MetaTags title="Login" description="Login page" />
       <div className="container	 mx-auto items-center justify-center">
         <HeaderWithRulers heading="Login" className="text-white" />
-        <Form>
-          <Input name="Username" />
-          <ShowHidePassword name="password" />
+        <Form onSubmit={onSubmit}>
+          <Input name="Email" />
+          <ShowHidePassword name="Password" />
           <Button
             handleClick={() => {
               console.log('clicked')

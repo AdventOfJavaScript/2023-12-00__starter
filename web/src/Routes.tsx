@@ -1,6 +1,7 @@
 import { PrivateSet, Route, Router, Set } from '@redwoodjs/router'
 
 import AuthLayout from './layouts/AuthLayout/AuthLayout'
+import InteriorLayout from './layouts/InteriorLayout/InteriorLayout'
 
 // In this file, all Page components from 'src/pages` are auto-imported. Nested
 // directories are supported, and should be uppercase. Each subdirectory will be
@@ -14,7 +15,9 @@ const Routes = () => {
   return (
     <Router>
       <PrivateSet unauthenticated="login">
-        <Route path="/dashboard" page={DashboardPage} name="dashboard" />
+        <Set wrap={InteriorLayout}>
+          <Route path="/dashboard" page={DashboardPage} name="dashboard" />
+        </Set>
       </PrivateSet>
       <Set wrap={AuthLayout}>
         <Route path="/signup" page={SignupPage} name="signup" />
