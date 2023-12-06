@@ -8,12 +8,12 @@ import ShowHidePassword from 'src/components/ShowHidePassword/ShowHidePassword'
 const ForgotPasswordPage = () => {
   return (
     <>
-      <MetaTags title="Login" description="Login page" />
-      <div className="container mx-auto">
+      <MetaTags title="Forgot Password" description="forgot password page" />
+      <div className="container mx-auto	">
         <HeaderWithRulers heading="Forgot Password?" className="text-white" />
         <Form>
-          <ShowHidePassword name="old password" />
           <ShowHidePassword name="new password" />
+          <ShowHidePassword name="confirm password" />
           <Button
             handleClick={() => {
               console.log('clicked')
