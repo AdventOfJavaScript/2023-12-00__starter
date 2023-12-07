@@ -39,6 +39,7 @@
   input[type="number"],
   input[type="tel"],
   input[type="email"],
+  input[type="date"],
   input[type="text"] {
     @apply font-sans text-2xl h-[100px] w-full px-7
   }
@@ -196,4 +197,19 @@
     -webkit-text-stroke-color: white;
     @apply text-black;
   }
+}
+
+.date-field{
+  margin-bottom: 20px;
+  height: 100px;
+  width: 100%;
+  padding-left: 1.75rem;
+  padding-right: 1.75rem;
+  font-family: Inter, sans-serif;
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.align-links{
+  text-align-last: center;
 }
