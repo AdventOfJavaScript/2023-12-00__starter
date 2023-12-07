@@ -1,6 +1,6 @@
 import { supabase } from 'api/db/supabase'
 
-import { DateField, Form, Submit } from '@redwoodjs/forms'
+import { DateField, Form, Label, Submit } from '@redwoodjs/forms'
 import { Link, navigate, routes } from '@redwoodjs/router'
 import { MetaTags } from '@redwoodjs/web'
 
@@ -9,19 +9,9 @@ import HeaderWithRulers from 'src/components/HeaderWithRulers/HeaderWithRulers'
 import Input from 'src/components/Input/Input'
 
 const EventPage = () => {
-  const onSubmit = (inputs) => {
-    console.log('inputs')
+  const onSubmit = () => {
+    console.log('do something')
   }
-  // const onLogin = () => {
-  //   navigate(routes.dashboard())
-  // }
-  // async function signIn(state) {
-  //   const { data, error } = await supabase.auth.signInWithPassword({
-  //     email: state.Email,
-  //     password: state.Password,
-  //   })
-  //   // console.log(data.user.role)
-  // }
   return (
     <>
       <MetaTags title="Event" description="Event Page" />
@@ -29,7 +19,10 @@ const EventPage = () => {
         <HeaderWithRulers heading="Set up your Group" className="text-white" />
         <Form onSubmit={onSubmit}>
           <Input name="Group Name" />
-          <DateField name="Event Date" className="date-field" />
+          <div className="field">
+            <Label name="eventDate">Event Date</Label>
+            <DateField name="eventDate" placeholder="" className="date-field" />
+          </div>
           <Checkbox name="Event Type" />
           <Submit
             className="

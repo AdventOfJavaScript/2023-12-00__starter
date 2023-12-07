@@ -43,7 +43,7 @@ const LoginPage = () => {
           >
             Submit
           </Button>
-          <div className="container	 mx-auto items-center justify-center ">
+          <div className="align-links	 container mx-auto items-center justify-center	">
             <Link to={routes.signup()} className="underline">
               Need an account?
             </Link>
