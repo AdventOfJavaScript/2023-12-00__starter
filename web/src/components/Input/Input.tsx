@@ -1,10 +1,10 @@
 import { Label, TextField } from '@redwoodjs/forms'
 
-const Input = ({ name }) => {
+const Input = ({ name, isInvalid = false }) => {
   return (
-    <div className="field relative">
+    <div className={`field relative ${isInvalid ? 'invalid' : ''}`}>
       <Label name={name}>{name}</Label>
-      <TextField name={name} placeholder=" " />
+      <TextField name={name} placeholder=" " required />
     </div>
   )
 }

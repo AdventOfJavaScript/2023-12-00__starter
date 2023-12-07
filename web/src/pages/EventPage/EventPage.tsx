@@ -1,13 +1,47 @@
-import { DateField, Form, Label, Submit } from '@redwoodjs/forms'
-import { Link, navigate, routes } from '@redwoodjs/router'
-import { MetaTags } from '@redwoodjs/web'
+import { DateField, Form, Label, Submit, TextField } from '@redwoodjs/forms'
+import { navigate, routes } from '@redwoodjs/router'
+import { MetaTags, useMutation } from '@redwoodjs/web'
+import { toast } from '@redwoodjs/web/dist/toast'
 
 import Checkbox from 'src/components/Checkbox/Checkbox'
 import HeaderWithRulers from 'src/components/HeaderWithRulers/HeaderWithRulers'
-import Input from 'src/components/Input/Input'
 
 const EventPage = () => {
-  const onSubmit = () => {
+  const CREATE_EVENT_MUTATION = gql`
+    mutation createEventMutation(
+      $name: String!
+      $date: DateTime!
+      $sendReminder: Boolean!
+    ) {
+      createEvent(
+        input: { name: $name, sendReminder: $sendReminder, date: $date }
+      ) {
+        id
+        name
+        date
+        createdAt
+      }
+    }
+  `
+  const [createEvent, { loading }] = useMutation(CREATE_EVENT_MUTATION, {
+    onCompleted: (data) => {
+      toast.success('Event was successfully created.')
+      console.log(data)
+      navigate(routes.invite({ id: data.createEvent.id }))
+    },
+    onError: (error) => {
+      console.error({ error })
+      toast.error(error.message)
+    },
+  })
+  const onSubmit = (inputs) => {
+    createEvent({
+      variables: {
+        name: inputs.eventName,
+        date: inputs.eventDate,
+        sendReminder: inputs.eventReminder,
+      },
+    })
     navigate(routes.invite())
   }
 
@@ -17,12 +51,15 @@ const EventPage = () => {
       <div className="container	 mx-auto">
         <HeaderWithRulers heading="Set up your Group" className="text-white" />
         <Form onSubmit={onSubmit}>
-          <Input name="Group Name" />
+          <div className="field">
+            <Label name="eventDate">Group Name</Label>
+            <TextField name="eventName" />
+          </div>
           <div className="field">
             <Label name="eventDate">Event Date</Label>
             <DateField name="eventDate" placeholder="" className="date-field" />
           </div>
-          <Checkbox name="Event Type" />
+          <Checkbox name="eventReminder" />
           <Submit
             className="
     w-full
