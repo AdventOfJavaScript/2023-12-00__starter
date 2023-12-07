@@ -2,12 +2,14 @@ import { useState } from 'react'
 
 import { AnimatePresence, motion } from 'framer-motion'
 
+import { useAuth } from 'src/auth'
+
 import Avatar from '../Avatar/Avatar'
 import Icon from '../Icon/Icon'
 
 const MyAccount = () => {
   const [isDropdownShowing, setIsDropdownShowing] = useState(false)
-
+  const { logOut } = useAuth()
   const toggleDropdown = () => {
     setIsDropdownShowing((prevValue) => !prevValue)
   }
@@ -25,7 +27,7 @@ const MyAccount = () => {
         <div className="text-left">
           <div className="text-sm">Logged in as</div>
           <div className="text-lg">
-            <strong>Amy Dutton</strong>
+            <strong>Cameron Luo</strong>
           </div>
         </div>
       </button>
@@ -51,7 +53,7 @@ const MyAccount = () => {
                 </div>
                 My Event
               </li>
-              <li>
+              <li onClick={logOut}>
                 <div className="text-pastelMagenta">
                   <Icon size={32} id="logout" />
                 </div>
