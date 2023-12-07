@@ -1,10 +1,9 @@
 import { supabase } from 'api/db/supabase'
 
-import { Form } from '@redwoodjs/forms'
+import { Form, Submit } from '@redwoodjs/forms'
 import { Link, navigate, routes } from '@redwoodjs/router'
 import { MetaTags } from '@redwoodjs/web'
 
-import Button from 'src/components/Button/Button'
 import HeaderWithRulers from 'src/components/HeaderWithRulers/HeaderWithRulers'
 import Input from 'src/components/Input/Input'
 import ShowHidePassword from 'src/components/ShowHidePassword/ShowHidePassword'
@@ -15,16 +14,27 @@ const LoginPage = () => {
     onLogin()
   }
   const onLogin = () => {
-    navigate(routes.dashboard())
+    navigate(routes.event())
   }
   async function signIn(state) {
-    console.log(state)
-    const { data, error } = await supabase.auth.signInWithPassword({
-      email: state.Email,
-      password: state.Password,
-    })
-    console.log(data.user.role)
+    try {
+      const { data, error } = await supabase.auth.signInWithPassword({
+        email: state.Email,
+        password: state.Password,
+      })
+
+      // Check for errors
+      if (error) {
+        // Handle the error (e.g., display an error message)
+        console.error('Sign-in error:', error.message)
+      } else {
+        onLogin()
+      }
+    } catch (e) {
+      console.error('Unexpected error during sign-in:', e.message)
+    }
   }
+
   return (
     <>
       <MetaTags title="Login" description="Login page" />
@@ -33,16 +43,13 @@ const LoginPage = () => {
         <Form onSubmit={onSubmit}>
           <Input name="Email" />
           <ShowHidePassword name="Password" />
-          <Button
-            handleClick={() => {
-              console.log('clicked')
-            }}
+          <Submit
             className="
         w-full
       rounded-full bg-supernova py-5 font-handwriting text-3xl uppercase text-black"
           >
             Submit
-          </Button>
+          </Submit>
           <div className="align-links	 container mx-auto items-center justify-center	">
             <Link to={routes.signup()} className="underline">
               Need an account?

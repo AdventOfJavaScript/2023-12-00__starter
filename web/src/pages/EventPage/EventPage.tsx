@@ -1,5 +1,3 @@
-import { supabase } from 'api/db/supabase'
-
 import { DateField, Form, Label, Submit } from '@redwoodjs/forms'
 import { Link, navigate, routes } from '@redwoodjs/router'
 import { MetaTags } from '@redwoodjs/web'
@@ -10,8 +8,9 @@ import Input from 'src/components/Input/Input'
 
 const EventPage = () => {
   const onSubmit = () => {
-    console.log('do something')
+    navigate(routes.invite())
   }
+
   return (
     <>
       <MetaTags title="Event" description="Event Page" />
