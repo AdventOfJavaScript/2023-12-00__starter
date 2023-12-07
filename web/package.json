@@ -11,11 +11,13 @@
     ]
   },
   "dependencies": {
+    "@redwoodjs/auth-supabase-web": "6.4.1",
     "@redwoodjs/forms": "6.4.1",
     "@redwoodjs/router": "6.4.1",
     "@redwoodjs/web": "6.4.1",
     "@storybook/manager-api": "^7.6.1",
     "@storybook/theming": "^7.6.1",
+    "@supabase/supabase-js": "^2",
     "framer-motion": "^10.16.5",
     "prop-types": "15.8.1",
     "react": "18.2.0",

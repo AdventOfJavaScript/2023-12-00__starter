@@ -5064,6 +5064,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@redwoodjs/auth-supabase-api@npm:6.4.1":
+  version: 6.4.1
+  resolution: "@redwoodjs/auth-supabase-api@npm:6.4.1"
+  dependencies:
+    "@babel/runtime-corejs3": 7.23.2
+    core-js: 3.33.2
+    jsonwebtoken: 9.0.0
+  checksum: 17e598754654020510c5b60172b70b914be312642539000759d3ec1f5970d6c09252edb4aac8906961609b6e53ac01621e227d666e63843d71e2581949eac0e2
+  languageName: node
+  linkType: hard
+
 "@redwoodjs/auth-supabase-setup@npm:6.4.1":
   version: 6.4.1
   resolution: "@redwoodjs/auth-supabase-setup@npm:6.4.1"
@@ -5072,6 +5083,18 @@ __metadata:
     "@redwoodjs/cli-helpers": 6.4.1
     core-js: 3.33.2
   checksum: e09dd7d8efe87ca1d44caa477b80048186cb248e0beabcfc5866d27a6e33920a0c782002e7c7e2c34c928ce72f1255bd0da3eba56fd14e5805ada9a20e4b7c44
+  languageName: node
+  linkType: hard
+
+"@redwoodjs/auth-supabase-web@npm:6.4.1":
+  version: 6.4.1
+  resolution: "@redwoodjs/auth-supabase-web@npm:6.4.1"
+  dependencies:
+    "@babel/runtime-corejs3": 7.23.2
+    core-js: 3.33.2
+  peerDependencies:
+    "@supabase/supabase-js": 2.26.0
+  checksum: 1b1108c5dd173a4f5d18455589901234159959d0e08126bbaa6fda65c6d8522488983c30354c43e9e6feeb0ff1a9e10a5fcb1e83e58a30aa7f3ef129d8615904
   languageName: node
   linkType: hard
 
@@ -6802,7 +6825,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@supabase/supabase-js@npm:^2.39.0":
+"@supabase/supabase-js@npm:^2, @supabase/supabase-js@npm:^2.39.0":
   version: 2.39.0
   resolution: "@supabase/supabase-js@npm:2.39.0"
   dependencies:
@@ -8936,6 +8959,7 @@ __metadata:
   resolution: "api@workspace:api"
   dependencies:
     "@redwoodjs/api": 6.4.1
+    "@redwoodjs/auth-supabase-api": 6.4.1
     "@redwoodjs/graphql-server": 6.4.1
   languageName: unknown
   linkType: soft
@@ -24041,12 +24065,14 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "web@workspace:web"
   dependencies:
+    "@redwoodjs/auth-supabase-web": 6.4.1
     "@redwoodjs/forms": 6.4.1
     "@redwoodjs/router": 6.4.1
     "@redwoodjs/vite": 6.4.1
     "@redwoodjs/web": 6.4.1
     "@storybook/manager-api": ^7.6.1
     "@storybook/theming": ^7.6.1
+    "@supabase/supabase-js": ^2
     "@types/react": 18.2.14
     "@types/react-dom": 18.2.6
     autoprefixer: ^10.4.16
