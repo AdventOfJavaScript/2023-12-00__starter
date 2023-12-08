@@ -16,7 +16,6 @@ const SignupPage = () => {
   }
 
   async function signUpNewUser(state) {
-    console.log(state)
     const { data, error } = await supabase.auth.signUp({
       email: state.Email,
       password: state.Password,

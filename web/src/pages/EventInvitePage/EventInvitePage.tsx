@@ -10,7 +10,7 @@ const EventInvitePage = ({ id }) => {
     <>
       <MetaTags title="EventInvite" description="EventInvite page" />
       <EventsCell id={id} />
-      <InviteGroup />
+      <InviteGroup id={id} />
     </>
   )
 }

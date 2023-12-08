@@ -1,6 +1,9 @@
 import type { EventsQuery } from 'types/graphql'
 
 import type { CellFailureProps, CellSuccessProps } from '@redwoodjs/web'
+import { useMutation } from '@redwoodjs/web'
+
+import Button from '../Button/Button'
 
 export const QUERY = gql`
   query EventsQuery($id: String!) {
@@ -8,6 +11,22 @@ export const QUERY = gql`
       name
       date
       sendReminder
+      userStatus {
+        user {
+          firstName
+          lastName
+          email
+        }
+      }
+    }
+  }
+`
+
+export const UPDATE_EVENT_NAME = gql`
+  mutation EventsCell_UpdateEvent($id: String!, $name: String!) {
+    updateEvent(id: $id, input: { name: $name }) {
+      id
+      name
     }
   }
 `
@@ -37,6 +56,24 @@ export const Success = ({ event }: CellSuccessProps<EventsQuery>) => {
         {weeksLeft} Weeks & {daysLeftAfterWeeks} Days until
       </p>
       <p className="heading-name">{event.name}</p>
+      {/* <Button className="button" handleClick={event.sendReminder/> */}
     </ul>
+  )
+}
+
+export const ModifyEvent = ({ id, name }) => {
+  const [updateEventName, { data, loading, error }] =
+    useMutation(UPDATE_EVENT_NAME)
+
+  const handleCheckClick = () => {
+    updateEventName({
+      variables: { id, name },
+    })
+  }
+
+  return (
+    <>
+      <Button handleClick={handleCheckClick}>Edit</Button>
+    </>
   )
 }
