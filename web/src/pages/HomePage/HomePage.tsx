@@ -5,8 +5,8 @@ import LoginPage from '../LoginPage/LoginPage'
 const HomePage = () => {
   return (
     <>
-      <MetaTags title="Home" description="Home Page" />
-      <LoginPage></LoginPage>
+      <MetaTags title="Home" description="HomePage" />
+      <LoginPage />
     </>
   )
 }
