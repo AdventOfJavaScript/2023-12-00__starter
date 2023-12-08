@@ -10,7 +10,7 @@ const Routes = () => {
       <PrivateSet unauthenticated="login">
         <Set wrap={InteriorLayout}>
           <Route path="/dashboard" page={DashboardPage} name="dashboard" />
-          <Route path="/group/invite/{id: Int}" page={EventInvitePage} name="invite" />
+          <Route path="/group/invite/{id:Int}" page={EventInvitePage} name="invite" />
           <Route path="/event" page={EventPage} name="event" />
         </Set>
       </PrivateSet>

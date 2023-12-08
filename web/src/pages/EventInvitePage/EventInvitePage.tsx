@@ -1,20 +1,42 @@
 import { Link, routes } from '@redwoodjs/router'
-import { MetaTags } from '@redwoodjs/web'
+import { MetaTags, useMutation } from '@redwoodjs/web'
+import { toast } from '@redwoodjs/web/dist/toast'
 
-const EventInvitePage = () => {
+import InviteGroup from 'src/components/InviteGroup/InviteGroup'
+
+const EventInvitePage = ({ id }) => {
+  // const GET_EVENT_MUTATION = gql`
+  //   mutation getEventMutation($id: String!) {
+  //     getEvent(id: $id) {
+  //       id
+  //       name
+  //       date
+  //       createdAt
+  //     }
+  //   }
+  // `
+  // const [getEvent, { loading }] = useMutation(GET_EVENT_MUTATION, {
+  //   onCompleted: (data) => {
+  //     toast.success('Event was successfully fetched.')
+  //     console.log(data)
+  //   },
+  //   onError: (error) => {
+  //     console.error({ error })
+  //     toast.error(error.message)
+  //   },
+  // })
+  console.log(id)
+  // const onSubmit = () => {
+  //   getEvent({
+  //     variables: {
+  //       id: id,
+  //     },
+  //   })
+  // }
   return (
     <>
       <MetaTags title="EventInvite" description="EventInvite page" />
-
-      <h1>EventInvitePage</h1>
-      <p>
-        Find me in{' '}
-        <code>./web/src/pages/EventInvitePage/EventInvitePage.tsx</code>
-      </p>
-      <p>
-        My default route is named <code>event/invite</code>, link to me with `
-        <Link to={routes.event / invite()}>EventInvite</Link>`
-      </p>
+      <InviteGroup />
     </>
   )
 }
