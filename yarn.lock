@@ -3815,6 +3815,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@one-ini/wasm@npm:0.1.1":
+  version: 0.1.1
+  resolution: "@one-ini/wasm@npm:0.1.1"
+  checksum: 54700e055037f1a63bfcc86d24822203b25759598c2c3e295d1435130a449108aebc119c9c2e467744767dbe0b6ab47a182c61aa1071ba7368f5e20ab197ba65
+  languageName: node
+  linkType: hard
+
 "@open-draft/until@npm:^1.0.3":
   version: 1.0.3
   resolution: "@open-draft/until@npm:1.0.3"
@@ -5002,6 +5009,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@react-email/render@npm:0.0.9":
+  version: 0.0.9
+  resolution: "@react-email/render@npm:0.0.9"
+  dependencies:
+    html-to-text: 9.0.5
+    pretty: 2.0.0
+    react: 18.2.0
+    react-dom: 18.2.0
+  checksum: 128b3a7c65e77a14600e48fb24183e182de82b4ddc8ff11bb239c421fa68bd6eb8b063822b5abe9f8599e34ece315cdb961b4133c59285cebcc517d2ec0ae8da
+  languageName: node
+  linkType: hard
+
 "@redwoodjs/api-server@npm:6.4.1":
   version: 6.4.1
   resolution: "@redwoodjs/api-server@npm:6.4.1"
@@ -5676,6 +5695,16 @@ __metadata:
     prettier:
       optional: true
   checksum: 275247e686cc999d91623d67ce09171f9ed17764616bb7941877439ce44b1cba305ac049e91981660cd8690f18d797cd27cecdf26cf436eb81895093e0223f42
+  languageName: node
+  linkType: hard
+
+"@selderee/plugin-htmlparser2@npm:^0.11.0":
+  version: 0.11.0
+  resolution: "@selderee/plugin-htmlparser2@npm:0.11.0"
+  dependencies:
+    domhandler: ^5.0.3
+    selderee: ^0.11.0
+  checksum: e938ba9aeb31a9cf30dcb2977ef41685c598bf744bedc88c57aa9e8b7e71b51781695cf99c08aac50773fd7714eba670bd2a079e46db0788abe40c6d220084eb
   languageName: node
   linkType: hard
 
@@ -10888,7 +10917,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"commander@npm:^10.0.1":
+"commander@npm:^10.0.0, commander@npm:^10.0.1":
   version: 10.0.1
   resolution: "commander@npm:10.0.1"
   checksum: 53f33d8927758a911094adadda4b2cbac111a5b377d8706700587650fd8f45b0bbe336de4b5c3fe47fd61f420a3d9bd452b6e0e6e5600a7e74d7bf0174f6efe3
@@ -11030,6 +11059,27 @@ __metadata:
     conc: dist/bin/concurrently.js
     concurrently: dist/bin/concurrently.js
   checksum: 0e9683196fe9c071d944345d21d8f34aa6c0cc50c0dd897e95619f2f1c9eb4871dca851b2569da17888235b7335b4c821ca19deed35bebcd9a131ee5d247f34c
+  languageName: node
+  linkType: hard
+
+"condense-newlines@npm:^0.2.1":
+  version: 0.2.1
+  resolution: "condense-newlines@npm:0.2.1"
+  dependencies:
+    extend-shallow: ^2.0.1
+    is-whitespace: ^0.3.0
+    kind-of: ^3.0.2
+  checksum: 19485db92a5d4658b50ab250626ece0cebe57f73af126b348604309894ed9a2b05f88f1802a090fd1897156eda0af69d8f14446bc62f978e0d048b5135e91694
+  languageName: node
+  linkType: hard
+
+"config-chain@npm:^1.1.13":
+  version: 1.1.13
+  resolution: "config-chain@npm:1.1.13"
+  dependencies:
+    ini: ^1.3.4
+    proto-list: ~1.2.1
+  checksum: 39d1df18739d7088736cc75695e98d7087aea43646351b028dfabd5508d79cf6ef4c5bcd90471f52cd87ae470d1c5490c0a8c1a292fbe6ee9ff688061ea0963e
   languageName: node
   linkType: hard
 
@@ -11807,7 +11857,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"deepmerge@npm:4.3.1, deepmerge@npm:^4.2.2":
+"deepmerge@npm:4.3.1, deepmerge@npm:^4.2.2, deepmerge@npm:^4.3.1":
   version: 4.3.1
   resolution: "deepmerge@npm:4.3.1"
   checksum: e53481aaf1aa2c4082b5342be6b6d8ad9dfe387bc92ce197a66dea08bd4265904a087e75e464f14d1347cf2ac8afe1e4c16b266e0561cc5df29382d3c5f80044
@@ -12352,6 +12402,20 @@ __metadata:
   dependencies:
     safe-buffer: ^5.0.1
   checksum: ebfbf19d4b8be938f4dd4a83b8788385da353d63307ede301a9252f9f7f88672e76f2191618fd8edfc2f24679236064176fab0b78131b161ee73daa37125408c
+  languageName: node
+  linkType: hard
+
+"editorconfig@npm:^1.0.3":
+  version: 1.0.4
+  resolution: "editorconfig@npm:1.0.4"
+  dependencies:
+    "@one-ini/wasm": 0.1.1
+    commander: ^10.0.0
+    minimatch: 9.0.1
+    semver: ^7.5.3
+  bin:
+    editorconfig: bin/editorconfig
+  checksum: ed6985959d7b34a56e1c09bef118758c81c969489b768d152c93689fce8403b0452462e934f665febaba3478eebc0fd41c0a36100783eaadf6d926c4abc87a3d
   languageName: node
   linkType: hard
 
@@ -14436,7 +14500,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"glob@npm:^10.0.0, glob@npm:^10.2.2, glob@npm:^10.3.10, glob@npm:^10.3.7":
+"glob@npm:^10.0.0, glob@npm:^10.2.2, glob@npm:^10.3.10, glob@npm:^10.3.3, glob@npm:^10.3.7":
   version: 10.3.10
   resolution: "glob@npm:10.3.10"
   dependencies:
@@ -15007,6 +15071,19 @@ __metadata:
   languageName: node
   linkType: hard
 
+"html-to-text@npm:9.0.5":
+  version: 9.0.5
+  resolution: "html-to-text@npm:9.0.5"
+  dependencies:
+    "@selderee/plugin-htmlparser2": ^0.11.0
+    deepmerge: ^4.3.1
+    dom-serializer: ^2.0.0
+    htmlparser2: ^8.0.2
+    selderee: ^0.11.0
+  checksum: 5d2c77b798cf88a81b1da2fc1ea1a3b3e2ff49fe5a3d812392f802fff18ec315cf0969bd7846ef2eb7df8c37f463bc63e8cbdcf84e42696c6f3e15dfa61cdf4f
+  languageName: node
+  linkType: hard
+
 "html-webpack-plugin@npm:5.5.3, html-webpack-plugin@npm:^5.5.0":
   version: 5.5.3
   resolution: "html-webpack-plugin@npm:5.5.3"
@@ -15034,7 +15111,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"htmlparser2@npm:^8.0.1":
+"htmlparser2@npm:^8.0.1, htmlparser2@npm:^8.0.2":
   version: 8.0.2
   resolution: "htmlparser2@npm:8.0.2"
   dependencies:
@@ -15367,7 +15444,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ini@npm:~1.3.0":
+"ini@npm:^1.3.4, ini@npm:~1.3.0":
   version: 1.3.8
   resolution: "ini@npm:1.3.8"
   checksum: ec93838d2328b619532e4f1ff05df7909760b6f66d9c9e2ded11e5c1897d6f2f9980c54dd638f88654b00919ce31e827040631eab0a3969e4d1abefa0719516a
@@ -15945,6 +16022,13 @@ __metadata:
     call-bind: ^1.0.2
     get-intrinsic: ^1.1.1
   checksum: ef5136bd446ae4603229b897f73efd0720c6ab3ec6cc05c8d5c4b51aa9f95164713c4cad0a22ff1fedf04865ff86cae4648bc1d5eead4b6388e1150525af1cc1
+  languageName: node
+  linkType: hard
+
+"is-whitespace@npm:^0.3.0":
+  version: 0.3.0
+  resolution: "is-whitespace@npm:0.3.0"
+  checksum: 2f4ef13e0195170bbb587437133ef81ed9d6aec1c5e88f4c2b9055a18a1e70f75d9a9376f0cdae64f3c519e05e5f734d6b8f9682e5cb50384843480bade785ae
   languageName: node
   linkType: hard
 
@@ -16629,6 +16713,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"js-beautify@npm:^1.6.12":
+  version: 1.14.11
+  resolution: "js-beautify@npm:1.14.11"
+  dependencies:
+    config-chain: ^1.1.13
+    editorconfig: ^1.0.3
+    glob: ^10.3.3
+    nopt: ^7.2.0
+  bin:
+    css-beautify: js/bin/css-beautify.js
+    html-beautify: js/bin/html-beautify.js
+    js-beautify: js/bin/js-beautify.js
+  checksum: 23267f8e68a4cf190274906fbec98c4fa44025e1b7e1fa701480867c9ab6b2b90a1bb2b358cd487c34d735a1039c16bcb51f82d390bcc6384172cc540aa11c9b
+  languageName: node
+  linkType: hard
+
 "js-levenshtein@npm:^1.1.6":
   version: 1.1.6
   resolution: "js-levenshtein@npm:1.1.6"
@@ -17056,6 +17156,13 @@ __metadata:
   dependencies:
     readable-stream: ^2.0.5
   checksum: ea4e509a5226ecfcc303ba6782cc269be8867d372b9bcbd625c88955df1987ea1a20da4643bf9270336415a398d33531ebf0d5f0d393b9283dc7c98bfcbd7b69
+  languageName: node
+  linkType: hard
+
+"leac@npm:^0.6.0":
+  version: 0.6.0
+  resolution: "leac@npm:0.6.0"
+  checksum: 5257781e10791ef8462eb1cbe5e48e3cda7692486f2a775265d6f5216cc088960c62f138163b8df0dcf2119d18673bfe7b050d6b41543d92a7b7ac90e4eb1e8b
   languageName: node
   linkType: hard
 
@@ -17802,6 +17909,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"minimatch@npm:9.0.1":
+  version: 9.0.1
+  resolution: "minimatch@npm:9.0.1"
+  dependencies:
+    brace-expansion: ^2.0.1
+  checksum: aa043eb8822210b39888a5d0d28df0017b365af5add9bd522f180d2a6962de1cbbf1bdeacdb1b17f410dc3336bc8d76fb1d3e814cdc65d00c2f68e01f0010096
+  languageName: node
+  linkType: hard
+
 "minimatch@npm:^3.0.2, minimatch@npm:^3.0.4, minimatch@npm:^3.0.5, minimatch@npm:^3.1.1, minimatch@npm:^3.1.2":
   version: 3.1.2
   resolution: "minimatch@npm:3.1.2"
@@ -18360,7 +18476,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"nopt@npm:^7.0.0":
+"nopt@npm:^7.0.0, nopt@npm:^7.2.0":
   version: 7.2.0
   resolution: "nopt@npm:7.2.0"
   dependencies:
@@ -18998,6 +19114,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"parseley@npm:^0.12.0":
+  version: 0.12.1
+  resolution: "parseley@npm:0.12.1"
+  dependencies:
+    leac: ^0.6.0
+    peberminta: ^0.9.0
+  checksum: df3de74172b72305b867298a71e5882c413df75d30f2bafb5fb70779dfd349c5e4db03441fbf8ca83da8e4aa72bd0ef2b5c73086c4825d27d1c649d61bc0bcc0
+  languageName: node
+  linkType: hard
+
 "parseurl@npm:~1.3.2, parseurl@npm:~1.3.3":
   version: 1.3.3
   resolution: "parseurl@npm:1.3.3"
@@ -19166,6 +19292,13 @@ __metadata:
     safe-buffer: ^5.0.1
     sha.js: ^2.4.8
   checksum: 5a30374e87d33fa080a92734d778cf172542cc7e41b96198c4c88763997b62d7850de3fbda5c3111ddf79805ee7c1da7046881c90ac4920b5e324204518b05fd
+  languageName: node
+  linkType: hard
+
+"peberminta@npm:^0.9.0":
+  version: 0.9.0
+  resolution: "peberminta@npm:0.9.0"
+  checksum: 59c2c39269d9f7f559cf44582f1c0503524c6a9bc3478e0309adba2b41c71ab98745a239a4e6f98f46105291256e6d8f12ae9860d9f016b1c9a6f52c0b63bfe7
   languageName: node
   linkType: hard
 
@@ -19931,6 +20064,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"pretty@npm:2.0.0":
+  version: 2.0.0
+  resolution: "pretty@npm:2.0.0"
+  dependencies:
+    condense-newlines: ^0.2.1
+    extend-shallow: ^2.0.1
+    js-beautify: ^1.6.12
+  checksum: 2fcd72f331d0afae3893ba88a5c05f6fdd62b059cb309028aa3309fc8a90410d81dfe66ae95677bc6d6d4a68f3cc1a247c13e5872bd35686f99acb33acc51164
+  languageName: node
+  linkType: hard
+
 "printable-characters@npm:^1.0.42":
   version: 1.0.42
   resolution: "printable-characters@npm:1.0.42"
@@ -20028,6 +20172,13 @@ __metadata:
     object-assign: ^4.1.1
     react-is: ^16.13.1
   checksum: 59ece7ca2fb9838031d73a48d4becb9a7cc1ed10e610517c7d8f19a1e02fa47f7c27d557d8a5702bec3cfeccddc853579832b43f449e54635803f277b1c78077
+  languageName: node
+  linkType: hard
+
+"proto-list@npm:~1.2.1":
+  version: 1.2.4
+  resolution: "proto-list@npm:1.2.4"
+  checksum: b9179f99394ec8a68b8afc817690185f3b03933f7b46ce2e22c1930dc84b60d09f5ad222beab4e59e58c6c039c7f7fcf620397235ef441a356f31f9744010e12
   languageName: node
   linkType: hard
 
@@ -20937,6 +21088,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"resend@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "resend@npm:2.0.0"
+  dependencies:
+    "@react-email/render": 0.0.9
+  checksum: 068f7de5b4506ba10b2200f499bca2eb4e0354db43394d4288277fb0ffb46d9d03cdd3e2be9752d0d2de2a2da0f2e1ee1e4bf942b96256b7baf9bf862931c991
+  languageName: node
+  linkType: hard
+
 "resolve-cwd@npm:^3.0.0":
   version: 3.0.0
   resolution: "resolve-cwd@npm:3.0.0"
@@ -21197,6 +21357,7 @@ __metadata:
     "@supabase/supabase-js": ^2.39.0
     dotenv: ^16.3.1
     prettier-plugin-tailwindcss: 0.4.1
+    resend: ^2.0.0
   languageName: unknown
   linkType: soft
 
@@ -21377,6 +21538,15 @@ __metadata:
   version: 2.7.0
   resolution: "secure-json-parse@npm:2.7.0"
   checksum: f57eb6a44a38a3eeaf3548228585d769d788f59007454214fab9ed7f01fbf2e0f1929111da6db28cf0bcc1a2e89db5219a59e83eeaec3a54e413a0197ce879e4
+  languageName: node
+  linkType: hard
+
+"selderee@npm:^0.11.0":
+  version: 0.11.0
+  resolution: "selderee@npm:0.11.0"
+  dependencies:
+    parseley: ^0.12.0
+  checksum: c2ad8313a0dbf3c0b74752a8d03cfbc0931ae77a36679cdb64733eb732c1762f95a5174249bf7e8b8103874cb0e013a030f9c8b72f5d41e62f1d847d4a845d39
   languageName: node
   linkType: hard
 

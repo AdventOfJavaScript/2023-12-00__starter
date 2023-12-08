@@ -28,6 +28,7 @@
     "@supabase/auth-ui-react": "^0.4.6",
     "@supabase/auth-ui-shared": "^0.1.8",
     "@supabase/supabase-js": "^2.39.0",
-    "dotenv": "^16.3.1"
+    "dotenv": "^16.3.1",
+    "resend": "^2.0.0"
   }
 }
