@@ -1,5 +1,5 @@
 import { DateField, Form, Label, Submit, TextField } from '@redwoodjs/forms'
-import { navigate, routes } from '@redwoodjs/router'
+import { Link, navigate, routes } from '@redwoodjs/router'
 import { MetaTags, useMutation } from '@redwoodjs/web'
 import { toast } from '@redwoodjs/web/dist/toast'
 
@@ -42,7 +42,6 @@ const EventPage = () => {
         sendReminder: inputs.eventReminder,
       },
     })
-    navigate(routes.invite())
   }
 
   return (
