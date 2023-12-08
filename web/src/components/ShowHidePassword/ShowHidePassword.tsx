@@ -15,9 +15,9 @@ const ShowHidePassword = ({ name }) => {
     <div className="field relative">
       <Label name={name}>{name}</Label>
       {isPasswordShowing ? (
-        <PasswordField name={name} placeholder=" " />
+        <PasswordField name={name} placeholder=" " required />
       ) : (
-        <TextField name={name} placeholder=" " />
+        <TextField name={name} placeholder=" " required />
       )}
       <button className="absolute right-6 top-8" onClick={toggleShowPassword}>
         {isPasswordShowing ? (

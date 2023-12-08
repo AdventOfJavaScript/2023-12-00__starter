@@ -4,7 +4,6 @@ import RoundButton from '../RoundButton/RoundButton'
 const InviteGroup = () => {
   return (
     <div>
-      {/* form */}
       <div className="label ml-5">Invite a friend or family member</div>
       <div className="mb-10 ml-5 flex items-center gap-5 bg-spanishGreen p-4">
         <div className="field flex-1">
@@ -37,7 +36,7 @@ const InviteGroup = () => {
             avatar: 'https://picsum.photos/seed/1701322447715/300/300',
           }}
           email="email@email.com"
-          name="Amy Dutton"
+          name="Cameron L"
         />
         <Card
           avatar={{
@@ -45,7 +44,7 @@ const InviteGroup = () => {
             avatar: 'https://picsum.photos/seed/1701322447715/300/300',
           }}
           email="email@email.com"
-          name="Amy Dutton"
+          name="Cameron L"
         />
       </div>
     </div>

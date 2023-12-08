@@ -1,20 +1,16 @@
 import { Link, routes } from '@redwoodjs/router'
-import { MetaTags } from '@redwoodjs/web'
+import { MetaTags, useMutation } from '@redwoodjs/web'
+import { toast } from '@redwoodjs/web/dist/toast'
 
-const EventInvitePage = () => {
+import EventsCell from 'src/components/EventsCell/EventsCell'
+import InviteGroup from 'src/components/InviteGroup/InviteGroup'
+
+const EventInvitePage = ({ id }) => {
   return (
     <>
       <MetaTags title="EventInvite" description="EventInvite page" />
-
-      <h1>EventInvitePage</h1>
-      <p>
-        Find me in{' '}
-        <code>./web/src/pages/EventInvitePage/EventInvitePage.tsx</code>
-      </p>
-      <p>
-        My default route is named <code>event/invite</code>, link to me with `
-        <Link to={routes.event / invite()}>EventInvite</Link>`
-      </p>
+      <EventsCell id={id} />
+      <InviteGroup />
     </>
   )
 }

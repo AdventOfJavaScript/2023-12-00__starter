@@ -1,6 +1,6 @@
 import { supabase } from 'api/db/supabase'
 
-import { Form, Submit } from '@redwoodjs/forms'
+import { Form, Submit, SubmitHandler } from '@redwoodjs/forms'
 import { Link, navigate, routes } from '@redwoodjs/router'
 import { MetaTags } from '@redwoodjs/web'
 
@@ -8,8 +8,15 @@ import HeaderWithRulers from 'src/components/HeaderWithRulers/HeaderWithRulers'
 import Input from 'src/components/Input/Input'
 import ShowHidePassword from 'src/components/ShowHidePassword/ShowHidePassword'
 
+interface FormValues {
+  name: string
+  email: string
+  message: string
+}
+
 const LoginPage = () => {
-  const onSubmit = (inputs) => {
+  const [isInvalid, setisInvalid] = React.useState(false)
+  const onSubmit: SubmitHandler<FormValues> = (inputs) => {
     signIn(inputs)
     onLogin()
   }
@@ -27,7 +34,9 @@ const LoginPage = () => {
       if (error) {
         // Handle the error (e.g., display an error message)
         console.error('Sign-in error:', error.message)
+        setisInvalid(true)
       } else {
+        //setisInvalid(false)
         onLogin()
       }
     } catch (e) {
@@ -41,7 +50,7 @@ const LoginPage = () => {
       <div className="container	 mx-auto items-center justify-center">
         <HeaderWithRulers heading="Login" className="text-white" />
         <Form onSubmit={onSubmit}>
-          <Input name="Email" />
+          <Input name="Email" isInvalid={isInvalid} />
           <ShowHidePassword name="Password" />
           <Submit
             className="

@@ -14,6 +14,9 @@
  * END --- SETUP TAILWINDCSS EDIT
  */
 
+*{
+  font-family: Kalam, cursive;
+}
 
 @layer base {
   .label,
@@ -212,4 +215,26 @@
 
 .align-links{
   text-align-last: center;
+}
+
+
+.invalid {
+  background-color: ivory;
+  border: none;
+  outline: 2px solid red;
+  border-radius: 5px;
+}
+
+.heading{
+  font-family: Kalam, cursive;
+  font-size: 36px;
+  text-transform: uppercase;
+  letter-spacing: -0.05em;
+}
+
+.heading-name{
+  font-family: Kalam, cursive;
+  font-size: 72px;
+  text-transform: uppercase;
+  letter-spacing: -0.05em;
 }
