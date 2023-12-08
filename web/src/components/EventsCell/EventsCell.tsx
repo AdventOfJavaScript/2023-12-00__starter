@@ -55,7 +55,14 @@ export const Success = ({ event }: CellSuccessProps<EventsQuery>) => {
       <p className="heading" key={event.name}>
         {weeksLeft} Weeks & {daysLeftAfterWeeks} Days until
       </p>
-      <p className="heading-name">{event.name}</p>
+      <div className="flex ">
+        <div>
+          <p className="heading-name">{event.name}</p>
+        </div>
+        <div className="edit-button">
+          <ModifyEvent id={event.id} />
+        </div>
+      </div>
       {/* <Button className="button" handleClick={event.sendReminder/> */}
     </ul>
   )
@@ -73,7 +80,13 @@ export const ModifyEvent = ({ id, name }) => {
 
   return (
     <>
-      <Button handleClick={handleCheckClick}>Edit</Button>
+      <Button
+        handleClick={handleCheckClick}
+        className="margin-auto bg-supernova align-middle text-black"
+        size="small"
+      >
+        Edit
+      </Button>
     </>
   )
 }

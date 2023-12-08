@@ -56,7 +56,11 @@ const EventPage = () => {
           </div>
           <div className="field">
             <Label name="eventDate">Event Date</Label>
-            <DateField name="eventDate" placeholder="" className="date-field" />
+            <DateField
+              name="eventDate"
+              placeholder=""
+              className="date-field"
+            ></DateField>
           </div>
           <Checkbox name="eventReminder" />
           <Submit

@@ -234,7 +234,12 @@
 
 .heading-name{
   font-family: Kalam, cursive;
-  font-size: 72px;
+  font-size: 50px;
   text-transform: uppercase;
   letter-spacing: -0.05em;
+}
+
+.edit-button{
+  margin-left: 20px;
+  margin-top: 15px;
 }
